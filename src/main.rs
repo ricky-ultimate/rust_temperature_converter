@@ -66,6 +66,8 @@ pub fn display() {
     println!("2. C -> F");
     println!("3. F -> K");
     println!("4. C -> K");
+    println!("5. k -> F");
+    println!("6. K -> C");
     println!();
     print!("Enter option (1/2): ");
     io::stdout().flush().unwrap();
@@ -77,6 +79,8 @@ pub fn display() {
         2 => c_to_f(),
         3 => f_to_k(),
         4 => c_to_k(),
+        5 => k_to_f(),
+        6 => k_to_c(),
         _ => {}
     };
 }
