@@ -4,7 +4,7 @@ fn main() {
     display();
 }
 
-pub fn to_fahrenheit() {
+pub fn c_to_f() {
     let temp = get_input("Celcius");
     let fahrenheit = (temp * 1.8) + 32.0;
     println!("{}C -> {}F", temp, fahrenheit);
@@ -43,7 +43,7 @@ pub fn display() {
     let choice = get_user_choice();
 
     match choice {
-        1 => to_fahrenheit(),
+        1 => c_to_f(),
         2 => to_celcius(),
         _ => {}
     };
