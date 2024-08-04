@@ -4,18 +4,17 @@ fn main() {
     display();
 }
 
-
-pub fn to_fahrenheit(){
+pub fn to_fahrenheit() {
     let temp = get_input("Celcius");
     let fahrenheit = (temp * 1.8) + 32.0;
-    println!("{}C -> {}F", temp, fahrenheit );
+    println!("{}C -> {}F", temp, fahrenheit);
 }
 
-pub fn to_celcius(){
+pub fn to_celcius() {
     println!();
     let temp = get_input("Fahrenheit");
     let celcius = (temp - 32.0) * 1.8;
-    println!("{}F -> {}C", temp, celcius );
+    println!("{}F -> {}C", temp, celcius);
 }
 
 pub fn get_input(name: &str) -> f64 {
@@ -26,12 +25,12 @@ pub fn get_input(name: &str) -> f64 {
     let mut temp = String::new();
     io::stdin().read_line(&mut temp).expect("Invalid Message!");
 
-    let temp: f64  = temp.trim().parse().unwrap();
+    let temp: f64 = temp.trim().parse().unwrap();
 
     return temp;
 }
 
-pub fn display(){
+pub fn display() {
     println!("Temperture Converter");
     println!("----------------");
     println!();
@@ -48,10 +47,9 @@ pub fn display(){
         2 => to_celcius(),
         _ => {}
     };
-
 }
 
-pub fn get_user_choice()-> u8 {
+pub fn get_user_choice() -> u8 {
     let mut choice = String::new();
     io::stdin().read_line(&mut choice).expect("Error");
 
