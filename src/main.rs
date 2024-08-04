@@ -39,18 +39,22 @@ pub fn c_to_f_and_k(option: u8){
     }
 }
 
-pub fn k_to_f(){
-    println!();
-    let k = get_input("Kelvin");
-    let f = 1.8 * (k - 273.0) + 32.0;
-    println!("{}K -> {}F", k, f);
-}
-
-pub fn k_to_c(){
-    println!();
-    let k = get_input("Kelvin");
-    let c = k - 273.15;
-    println!("{}K -> {}C", k, c);
+pub fn k_to_f_and_c(option: u8){
+    match option {
+        1 => {
+            println!();
+            let k = get_input("Kelvin");
+            let f = 1.8 * (k - 273.0) + 32.0;
+            println!("{}K -> {}F", k, f);
+        },
+        2 => {
+            println!();
+            let k = get_input("Kelvin");
+            let c = k - 273.15;
+            println!("{}K -> {}C", k, c);
+        },
+        _ => {}
+    }
 }
 
 pub fn get_input(name: &str) -> f64 {
@@ -87,8 +91,8 @@ pub fn display() {
         2 => c_to_f_and_k(1),
         3 => f_to_c_and_k(2),
         4 => c_to_f_and_k(2),
-        5 => k_to_f(),
-        6 => k_to_c(),
+        5 => k_to_f_and_c(1),
+        6 => k_to_f_and_c(2),
         _ => {}
     };
 }
