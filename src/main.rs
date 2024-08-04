@@ -10,7 +10,7 @@ pub fn c_to_f() {
     println!("{}C -> {}F", temp, fahrenheit);
 }
 
-pub fn to_celcius() {
+pub fn f_to_c() {
     println!();
     let temp = get_input("Fahrenheit");
     let celcius = (temp - 32.0) * 1.8;
@@ -44,7 +44,7 @@ pub fn display() {
 
     match choice {
         1 => c_to_f(),
-        2 => to_celcius(),
+        2 => f_to_c(),
         _ => {}
     };
 }
