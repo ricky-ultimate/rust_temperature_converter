@@ -4,13 +4,6 @@ fn main() {
     display();
 }
 
-pub fn c_to_f() {
-    let c = get_input("Celcius");
-    let f = (c * 1.8) + 32.0;
-    println!("{}C -> {}F", c, f);
-}
-
-
 pub fn f_to_c_and_k(option: u8){
     match option{
         1 => {
@@ -29,11 +22,21 @@ pub fn f_to_c_and_k(option: u8){
     }
 }
 
-pub fn c_to_k() {
-    println!();
-    let c: f64 = get_input("Celcius");
-    let k = c + 273.15;
-    println!("{}C -> {}K", c, k);
+pub fn c_to_f_and_k(option: u8){
+    match option {
+        1 => {
+            let c = get_input("Celcius");
+            let f = (c * 1.8) + 32.0;
+            println!("{}C -> {}F", c, f);
+        },
+        2 => {
+            println!();
+            let c: f64 = get_input("Celcius");
+            let k = c + 273.15;
+            println!("{}C -> {}K", c, k);
+        },
+        _ => {}
+    }
 }
 
 pub fn k_to_f(){
@@ -81,9 +84,9 @@ pub fn display() {
 
     match choice {
         1 => f_to_c_and_k(1),
-        2 => c_to_f(),
+        2 => c_to_f_and_k(1),
         3 => f_to_c_and_k(2),
-        4 => c_to_k(),
+        4 => c_to_f_and_k(2),
         5 => k_to_f(),
         6 => k_to_c(),
         _ => {}
