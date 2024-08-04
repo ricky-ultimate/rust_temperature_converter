@@ -50,6 +50,8 @@ pub fn display() {
     println!();
     println!("1. F -> C");
     println!("2. C -> F");
+    println!("3. F -> K");
+    println!("4. C -> K");
     println!();
     print!("Enter option (1/2): ");
     io::stdout().flush().unwrap();
@@ -57,8 +59,10 @@ pub fn display() {
     let choice = get_user_choice();
 
     match choice {
-        1 => c_to_f(),
-        2 => f_to_c(),
+        1 => f_to_c(),
+        2 => c_to_f(),
+        3 => f_to_k(),
+        4 => c_to_k(),
         _ => {}
     };
 }
