@@ -5,44 +5,44 @@ fn main() {
 }
 
 pub fn c_to_f() {
-    let temp = get_input("Celcius");
-    let fahrenheit = (temp * 1.8) + 32.0;
-    println!("{}C -> {}F", temp, fahrenheit);
+    let c = get_input("Celcius");
+    let f = (c * 1.8) + 32.0;
+    println!("{}C -> {}F", c, f);
 }
 
 pub fn f_to_c() {
     println!();
-    let temp = get_input("Fahrenheit");
-    let celcius = (temp - 32.0) * 1.8;
-    println!("{}F -> {}C", temp, celcius);
+    let f = get_input("Fahrenheit");
+    let c = (f - 32.0) * 1.8;
+    println!("{}F -> {}C", f, c);
 }
 
 pub fn c_to_k() {
     println!();
-    let temp = get_input("Celcius");
-    let kelvin = temp + 273.15;
-    println!("{}C -> {}K", temp, kelvin);
+    let c: f64 = get_input("Celcius");
+    let k = c + 273.15;
+    println!("{}C -> {}K", c, k);
 }
 
 pub fn f_to_k() {
     println!();
-    let temp = get_input("Fahrenheit");
-    let kelvin: f64 = (5.0/9.0) * (temp + 459.67);
-    println!("{}F -> {}K", temp, kelvin);
+    let f = get_input("Fahrenheit");
+    let k: f64 = (5.0/9.0) * (f + 459.67);
+    println!("{}F -> {}K", f, k);
 }
 
 pub fn k_to_f(){
     println!();
-    let temp = get_input("Kelvin");
-    let fahrenheit = 1.8 * (temp - 273.0) + 32.0;
-    println!("{}K -> {}F", temp, fahrenheit);
+    let k = get_input("Kelvin");
+    let f = 1.8 * (k - 273.0) + 32.0;
+    println!("{}K -> {}F", k, f);
 }
 
 pub fn k_to_c(){
     println!();
-    let temp = get_input("Kelvin");
-    let celcius = temp - 273.15;
-    println!("{}K -> {}C", temp, celcius);
+    let k = get_input("Kelvin");
+    let c = k - 273.15;
+    println!("{}K -> {}C", k, c);
 }
 
 pub fn get_input(name: &str) -> f64 {
