@@ -17,6 +17,20 @@ pub fn f_to_c() {
     println!("{}F -> {}C", temp, celcius);
 }
 
+pub fn c_to_k() {
+    println!();
+    let temp = get_input("Celcius");
+    let kelvin = temp + 273.15;
+    println!("{}C -> {}K", temp, kelvin);
+}
+
+pub fn f_to_k() {
+    println!();
+    let temp = get_input("Fahrenheit");
+    let kelvin: f64 = (5.0/9.0) * (temp + 459.67);
+    println!("{}F -> {}K", temp, kelvin);
+}
+
 pub fn get_input(name: &str) -> f64 {
     println!();
     print!("Enter Temperature in {} : ", name);
