@@ -31,6 +31,20 @@ pub fn f_to_k() {
     println!("{}F -> {}K", temp, kelvin);
 }
 
+pub fn k_to_f(){
+    println!();
+    let temp = get_input("Kelvin");
+    let fahrenheit = 1.8 * (temp - 273.0) + 32.0;
+    println!("{}K -> {}F", temp, fahrenheit);
+}
+
+pub fn k_to_c(){
+    println!();
+    let temp = get_input("Kelvin");
+    let celcius = temp - 273.15;
+    println!("{}K -> {}C", temp, celcius);
+}
+
 pub fn get_input(name: &str) -> f64 {
     println!();
     print!("Enter Temperature in {} : ", name);
@@ -46,7 +60,7 @@ pub fn get_input(name: &str) -> f64 {
 
 pub fn display() {
     println!("Temperture Converter");
-    println!("----------------");
+    println!("--------------------");
     println!();
     println!("1. F -> C");
     println!("2. C -> F");
