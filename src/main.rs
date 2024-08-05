@@ -4,10 +4,14 @@ struct Fahrenheit{
     f: f64
 }
 
+struct Celcius{
+    c: f64
+}
+
 impl Fahrenheit {
     fn to_celcius(&self){
         let c: f64 = (self.f - 32.0) * (5.0/9.0);
-        println!("{}F -> {}C", self.f, c)
+        println!("{}F -> {}C", self.f, c);
     }
 
     fn to_kelvin(&self){
@@ -15,6 +19,19 @@ impl Fahrenheit {
         println!("{}F -> {}K", self.f, k);
     }
 }
+
+impl Celcius {
+    fn to_fahrenheit(&self){
+        let f = (self.c * 1.8) + 32.0;
+        println!("{}C -> {}F", self.c, f);
+    }
+
+    fn to_kelvin(&self){
+        let k = self.c + 273.15;
+        println!("{}C -> {}K", self.c, k);
+    }
+}
+
 fn main() {
     display();
 }
