@@ -6,13 +6,13 @@ struct Fahrenheit{
 
 impl Fahrenheit {
     fn to_celcius(&self){
-        let c: f64 = (f - 32.0) * 1.8;
-        println!("{}F -> {}C", f, c)
+        let c: f64 = (self.f - 32.0) * (5.0/9.0);
+        println!("{}F -> {}C", self.f, c)
     }
 
     fn to_kelvin(&self){
-        let k: f64 = (5.0/9.0) * (f + 459.67);
-        println!("{}F -> {}K", f, k);
+        let k: f64 = (5.0/9.0) * (self.f + 459.67);
+        println!("{}F -> {}K", self.f, k);
     }
 }
 fn main() {
@@ -85,9 +85,17 @@ pub fn display() {
     let choice = get_user_choice();
 
     match choice {
-        1 => f_to_c_and_k(1),
+        1 => {
+            let temp = get_input("Fahrenheit");
+            let f = Fahrenheit{f: temp};
+            f.to_celcius();
+        },
         2 => c_to_f_and_k(1),
-        3 => f_to_c_and_k(2),
+        3 => {
+            let temp = get_input("Fahrenheit");
+            let f = Fahrenheit{f:temp};
+            f.to_kelvin();
+        },
         4 => c_to_f_and_k(2),
         5 => k_to_f_and_c(1),
         6 => k_to_f_and_c(2),
