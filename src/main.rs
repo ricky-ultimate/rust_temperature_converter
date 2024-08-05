@@ -107,13 +107,21 @@ pub fn display() {
             let f = Fahrenheit{f: temp};
             f.to_celcius();
         },
-        2 => c_to_f_and_k(1),
+        2 => {
+            let temp = get_input("Celcius");
+            let c = Celcius{c: temp};
+            c.to_fahrenheit();
+        },
         3 => {
             let temp = get_input("Fahrenheit");
             let f = Fahrenheit{f:temp};
             f.to_kelvin();
         },
-        4 => c_to_f_and_k(2),
+        4 => {
+            let temp = get_input("Celcius");
+            let c = Celcius{c: temp};
+            c.to_kelvin()
+        },
         5 => k_to_f_and_c(1),
         6 => k_to_f_and_c(2),
         _ => {}
