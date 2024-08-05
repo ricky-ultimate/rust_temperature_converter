@@ -49,7 +49,7 @@ impl Kelvin {
 }
 
 fn main() {
-    display();
+    manage_user_choice();
 }
 
 pub fn get_input(name: &str) -> f64 {
@@ -65,7 +65,7 @@ pub fn get_input(name: &str) -> f64 {
     return temp;
 }
 
-pub fn display() {
+pub fn option_display(){
     println!("Temperture Converter");
     println!("--------------------");
     println!();
@@ -76,6 +76,11 @@ pub fn display() {
     println!("5. k -> F");
     println!("6. K -> C");
     println!();
+}
+
+pub fn manage_user_choice() {
+    
+    option_display();
     print!("Enter option (1/2/3/4/5/6): ");
     io::stdout().flush().unwrap();
 
