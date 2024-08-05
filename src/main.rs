@@ -8,6 +8,10 @@ struct Celcius{
     c: f64
 }
 
+struct Kelvin{
+    k: f64
+}
+
 impl Fahrenheit {
     fn to_celcius(&self){
         let c: f64 = (self.f - 32.0) * (5.0/9.0);
@@ -32,44 +36,20 @@ impl Celcius {
     }
 }
 
+impl Kelvin {
+    fn to_fahrenheit(&self){
+        let f = 1.8 * (self.k - 273.0) + 32.0;
+        println!("{}K -> {}F", self.k, f);
+    }
+
+    fn to_celcius(&self){
+        let c = self.k - 273.15;
+        println!("{}K -> {}C", self.k, c);
+    }
+}
+
 fn main() {
     display();
-}
-
-
-pub fn c_to_f_and_k(option: u8){
-    match option {
-        1 => {
-            let c = get_input("Celcius");
-            let f = (c * 1.8) + 32.0;
-            println!("{}C -> {}F", c, f);
-        },
-        2 => {
-            println!();
-            let c: f64 = get_input("Celcius");
-            let k = c + 273.15;
-            println!("{}C -> {}K", c, k);
-        },
-        _ => {}
-    }
-}
-
-pub fn k_to_f_and_c(option: u8){
-    match option {
-        1 => {
-            println!();
-            let k = get_input("Kelvin");
-            let f = 1.8 * (k - 273.0) + 32.0;
-            println!("{}K -> {}F", k, f);
-        },
-        2 => {
-            println!();
-            let k = get_input("Kelvin");
-            let c = k - 273.15;
-            println!("{}K -> {}C", k, c);
-        },
-        _ => {}
-    }
 }
 
 pub fn get_input(name: &str) -> f64 {
