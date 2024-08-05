@@ -76,7 +76,7 @@ pub fn display() {
     println!("5. k -> F");
     println!("6. K -> C");
     println!();
-    print!("Enter option (1/2): ");
+    print!("Enter option (1/2/3/4/5/6): ");
     io::stdout().flush().unwrap();
 
     let choice = get_user_choice();
