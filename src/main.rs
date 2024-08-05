@@ -100,10 +100,18 @@ pub fn display() {
         4 => {
             let temp = get_input("Celcius");
             let c = Celcius{c: temp};
-            c.to_kelvin()
+            c.to_kelvin();
         },
-        5 => k_to_f_and_c(1),
-        6 => k_to_f_and_c(2),
+        5 => {
+            let temp = get_input("Kelvin");
+            let k = Kelvin{k: temp};
+            k.to_fahrenheit();
+        },
+        6 => {
+            let temp = get_input("Kelvin");
+            let k = Kelvin{k: temp};
+            k.to_celcius();
+        },
         _ => {}
     };
 }
