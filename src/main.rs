@@ -1,26 +1,24 @@
 use std::io::{self, Write};
 
+struct Fahrenheit{
+    f: f64
+}
+
+impl Fahrenheit {
+    fn to_celcius(&self){
+        let c: f64 = (f - 32.0) * 1.8;
+        println!("{}F -> {}C", f, c)
+    }
+
+    fn to_kelvin(&self){
+        let k: f64 = (5.0/9.0) * (f + 459.67);
+        println!("{}F -> {}K", f, k);
+    }
+}
 fn main() {
     display();
 }
 
-pub fn f_to_c_and_k(option: u8){
-    match option{
-        1 => {
-            println!();
-            let f = get_input("Fahrenheit");
-            let c = (f - 32.0) * 1.8;
-            println!("{}F -> {}C", f, c);
-        },
-        2 => {
-            println!();
-            let f = get_input("Fahrenheit");
-            let k: f64 = (5.0/9.0) * (f + 459.67);
-            println!("{}F -> {}K", f, k);
-        },
-        _ => {}
-    }
-}
 
 pub fn c_to_f_and_k(option: u8){
     match option {
