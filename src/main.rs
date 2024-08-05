@@ -83,33 +83,27 @@ pub fn display() {
 
     match choice {
         1 => {
-            let temp = get_input("Fahrenheit");
-            let f = Fahrenheit { f: temp };
+            let f = Fahrenheit { f: get_input("Fahrenheit") };
             f.to_celcius();
         }
         2 => {
-            let temp = get_input("Celcius");
-            let c = Celcius { c: temp };
+            let c = Celcius { c: get_input("Celcius") };
             c.to_fahrenheit();
         }
         3 => {
-            let temp = get_input("Fahrenheit");
-            let f = Fahrenheit { f: temp };
+            let f = Fahrenheit { f: get_input("Fahrenheit") };
             f.to_kelvin();
         }
         4 => {
-            let temp = get_input("Celcius");
-            let c = Celcius { c: temp };
+            let c = Celcius { c: get_input("Celcius") };
             c.to_kelvin();
         }
         5 => {
-            let temp = get_input("Kelvin");
-            let k = Kelvin { k: temp };
+            let k = Kelvin { k: get_input("Kelvin") };
             k.to_fahrenheit();
         }
         6 => {
-            let temp = get_input("Kelvin");
-            let k = Kelvin { k: temp };
+            let k = Kelvin { k: get_input("Kelvin") };
             k.to_celcius();
         }
         _ => {}
