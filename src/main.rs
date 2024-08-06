@@ -63,7 +63,7 @@ pub fn get_input(name: &str) -> f64 {
     temp.trim().parse().unwrap()
 }
 
-pub fn option_display(){
+pub fn option_display() {
     println!("Temperture Converter");
     println!("--------------------");
     println!();
@@ -77,7 +77,6 @@ pub fn option_display(){
 }
 
 pub fn manage_user_choice() {
-    
     option_display();
     print!("Enter option (1/2/3/4/5/6): ");
     io::stdout().flush().unwrap();
