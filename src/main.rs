@@ -131,6 +131,5 @@ pub fn get_user_choice() -> u8 {
     let mut choice = String::new();
     io::stdin().read_line(&mut choice).expect("Error");
 
-    let choice = choice.trim().parse().unwrap();
-    return choice;
+    choice.trim().parse().unwrap()
 }
