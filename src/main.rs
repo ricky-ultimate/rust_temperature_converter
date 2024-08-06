@@ -60,9 +60,7 @@ pub fn get_input(name: &str) -> f64 {
     let mut temp = String::new();
     io::stdin().read_line(&mut temp).expect("Invalid Message!");
 
-    let temp: f64 = temp.trim().parse().unwrap();
-
-    return temp;
+    temp.trim().parse().unwrap()
 }
 
 pub fn option_display(){
